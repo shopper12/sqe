@@ -2,54 +2,58 @@
 
 Repository: `shopper12/sqe`
 Cloud handoff date: 2026-07-04
-Project: SQE1 January 2027 pass project for a Korean-qualified lawyer seeking SQE2 exemption.
+Project: SQE1 January 2027 study-material project.
 
-## Purpose
+## Uploaded files
 
-This repository is the cloud handoff for the SQE1 preparation project. It preserves the working conversation state, the legal research boundaries, the study-system decisions, and the artifact inventory so the project can continue from another computer.
+### Core context
 
-## Uploaded Cloud Files
+- `README.md`
+- `CLOUD_CONVERSATION.md`
+- `MANIFEST.md`
 
-- `README.md`: project overview and continuation point.
-- `CLOUD_CONVERSATION.md`: condensed conversation state and next-agent instructions.
-- `MANIFEST.md`: artifact inventory and regeneration map.
+### Planning and operations
 
-## Local Files Created In The Workspace
+- `SQE1_master_prompt.md`
+- `SQE1_30_day_plan.md`
+- `SQE1_day1_diagnostic_lesson.md`
+- `SQE1_study_log.md`
+- `SQE1_materials_comparison.md`
+- `SQE1_public_source_map.md`
+- `SQE1_dashboard.md`
 
-Study planning and operations:
+### Analysis
 
-- `SQE1_합격_마스터프롬프트.md`
-- `SQE1_30일_시작계획.md`
-- `SQE1_Day1_진단수업.md`
-- `SQE1_공부기록.md`
-- `SQE1_교재_자료_비교표.md`
-- `SQE1_공개소스_맵.md`
-- `SQE1_운영대시보드.md`
+- `reports/SQE1_REBUILD_AUDIT.md`
 
-Generators:
+### Main study materials
 
+- `textbooks/SQE1_THEORY_TEXTBOOK.md`
+- `question_banks/SQE1_PRACTICE_QUESTION_BANK.md`
+
+### Generators
+
+- `tools/build_sqe1_materials.py`
 - `tools/build_sqe1_coursebook.py`
 - `tools/build_sqe1_workbook.py`
 - `tools/build_sqe1_issue_atlas.py`
 
-Generated outputs:
+### Portable HTML outputs
 
-- `output/SQE1_강의식_총정리_교재_v0.4.pdf`
-- `output/SQE1_원문복제없는_문제집_v0.2.pdf`
-- `output/SQE1_과목별_쟁점_총망라_지도_v0.1.pdf`
-- Matching `.html` source files in `output/`
+- `output/sqe1_coursebook_v04.html`
+- `output/sqe1_workbook_v02.html`
+- `output/sqe1_issue_atlas_v01.html`
 
-## Verification Snapshot
+## Note on PDF handling
 
-- Coursebook v0.4: valid PDF, about 690 pages, about 6.4 MB.
-- Workbook v0.2: valid PDF, about 553 pages, 612 generated question blocks.
-- Issue atlas v0.1: valid PDF, about 145 pages.
-- Python compile check passed for all three generator scripts.
+The current connector writes text files. The repository therefore stores Markdown, Python source, and HTML. PDF outputs should be regenerated locally or by a later CI workflow.
 
-## Binary Artifact Note
+## Regeneration
 
-The connector used in this session uploads UTF-8 text files. Binary PDFs were generated locally and should be uploaded later through normal Git, the GitHub web UI, or regenerated on the next machine.
+```powershell
+python tools\build_sqe1_materials.py
+```
 
-## Legal Boundary
+## Quality rule
 
-Do not use pirated books, copyrighted question banks, leaked materials, or copied proprietary SQE prep content. The generated materials should be original summaries, frameworks, and questions based on lawful public sources and official exam specifications.
+Each topic must contain a rule, source anchor, trigger, trap, ethics angle, application example, or self-test item. Avoid generic repeated sections.
