@@ -2,43 +2,44 @@
 
 This repository is the cloud handoff for the SQE1 January 2027 study-material project.
 
-## What This Contains
+## Purpose
 
-- Lecture-style SQE1 coursebook generator.
-- Clean-room original SQE1 workbook generator.
-- Subject issue atlas generator.
-- Study plan, source map, operating dashboard, and continuation context.
+The project builds a practical SQE1 study system for a Korean-qualified lawyer preparing for SQE1 and considering SQE2 exemption. The focus is on original, structured learning material based on official SQE/SRA pages and public legal sources.
 
-The project deliberately does **not** copy paid textbooks, commercial question banks, leaked exams, or reconstructed questions. Materials are based on official SQE/SRA sources, public legal sources, and original explanations/questions.
+## Start here
 
-## Start Here
+1. `CLOUD_CONVERSATION.md` — prior context and next steps.
+2. `MANIFEST.md` — complete file inventory.
+3. `SQE1_public_source_map.md` — source anchors.
+4. `SQE1_dashboard.md` — operating dashboard.
+5. `textbooks/SQE1_THEORY_TEXTBOOK.md` — theory source.
+6. `question_banks/SQE1_PRACTICE_QUESTION_BANK.md` — practice workbook source.
 
-Read:
+## Main artifacts
 
-1. `CLOUD_CONVERSATION.md`
-2. `SQE1_운영대시보드.md` locally, or the dashboard section in `CLOUD_CONVERSATION.md`
-3. `SQE1_공개소스_맵.md` locally, or the source section in `CLOUD_CONVERSATION.md`
-4. `SQE1_30일_시작계획.md` locally, or the plan summary in `CLOUD_CONVERSATION.md`
+| Path | Purpose |
+|---|---|
+| `SQE1_master_prompt.md` | Rebuild specification |
+| `SQE1_30_day_plan.md` | Starter schedule |
+| `SQE1_day1_diagnostic_lesson.md` | First diagnostic lesson |
+| `SQE1_study_log.md` | Error-log template |
+| `SQE1_materials_comparison.md` | Source/material comparison |
+| `SQE1_public_source_map.md` | Public source map |
+| `SQE1_dashboard.md` | Operating dashboard |
+| `reports/SQE1_REBUILD_AUDIT.md` | Quality audit |
+| `textbooks/SQE1_THEORY_TEXTBOOK.md` | Theory textbook source |
+| `question_banks/SQE1_PRACTICE_QUESTION_BANK.md` | Practice workbook source |
+| `output/sqe1_coursebook_v04.html` | Portable coursebook HTML |
+| `output/sqe1_workbook_v02.html` | Portable workbook HTML |
+| `output/sqe1_issue_atlas_v01.html` | Portable issue atlas HTML |
 
-## Current Main Artifacts
+## Regenerate HTML
 
-Generated locally before cloud handoff:
+```powershell
+python tools\build_sqe1_materials.py
+```
 
-- Coursebook v0.4: lecture-style theory material.
-- Workbook v0.2: 612 original questions, including FLK1/FLK2 180-question mocks.
-- Issue atlas v0.1: trigger/rule/trap revision map.
-
-The HTML versions and generator scripts are intended to be kept in GitHub. Binary PDFs may need to be regenerated locally.
-
-Portable ASCII aliases used in GitHub:
-
-- `output/sqe1_coursebook_v04.html`
-- `output/sqe1_workbook_v02.html`
-- `output/sqe1_issue_atlas_v01.html`
-
-## Regenerate
-
-From the repository root:
+or individually:
 
 ```powershell
 python tools\build_sqe1_coursebook.py
@@ -46,12 +47,14 @@ python tools\build_sqe1_workbook.py
 python tools\build_sqe1_issue_atlas.py
 ```
 
-## Official Sources
+## Official sources
 
-- https://sqe.sra.org.uk/booking/assessment-dates-locations/booking-windows
-- https://sqe.sra.org.uk/about/sqe-assessment-topics
 - https://sqe.sra.org.uk/assessments/sqe1-assessments/sqe1-specification
 - https://sqe.sra.org.uk/assessments/sqe1-assessments/sqe1-single-best-answer
 - https://sqe.sra.org.uk/assessments/sqe1-assessments/sqe1-sample-questions
 - https://sqe.sra.org.uk/sqe-results/reports
 - https://www.sra.org.uk/solicitors/standards-regulations/
+
+## Current limitation
+
+This upload uses the available GitHub text-file connector. Markdown, Python, and HTML artifacts are stored in GitHub. PDF outputs should be regenerated locally or through a later GitHub Actions workflow.
