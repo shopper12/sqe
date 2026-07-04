@@ -27,13 +27,16 @@ Prompt archive:
 
 - `prompts/SQE1_합격_마스터프롬프트.md`
 
-## Not Yet Uploaded
-
 Generator scripts:
 
+- `tools/build_sqe1_workbook.py` full local script uploaded
+- `tools/build_sqe1_issue_atlas.py` full local script uploaded
+
+## Still Not Uploaded
+
+Large/root generator:
+
 - `tools/build_sqe1_coursebook.py`
-- `tools/build_sqe1_workbook.py`
-- `tools/build_sqe1_issue_atlas.py`
 
 Generated HTML outputs:
 
@@ -47,13 +50,23 @@ Generated PDF outputs:
 - Workbook PDF versions v0.1-v0.2
 - Issue atlas PDF v0.1
 
-## Reason
+Excluded intentionally:
 
-The available GitHub text-file connector can safely upload reviewed UTF-8 text files. A direct recursive upload of the whole workspace, including unreviewed binaries, was blocked by security review because the repository is public.
+- `tools/__pycache__/*.pyc`
 
-## Next Safe Options
+## Current Blocker
 
-1. Upload the remaining files one by one after review.
-2. Make the repository private, then upload the complete workspace.
-3. Use local Git or GitHub web upload manually for binary PDFs.
-4. Give explicit approval for publishing the full remaining workspace, including scripts, HTML, PDFs, and possible embedded metadata, to the public repository.
+The local environment currently has neither `git` nor `gh` available on PATH. The GitHub REST upload path also cannot proceed because the shell environment no longer exposes a GitHub authorization header. The GitHub connector can create and update UTF-8 text files, but it does not accept local file paths for binary PDFs or large HTML artifacts.
+
+Two smaller Python generator scripts were updated through the GitHub connector. The large coursebook generator and generated PDF/HTML outputs still require one of the following:
+
+1. Install/use local Git or GitHub CLI and push the files normally.
+2. Upload the remaining files through the GitHub web UI.
+3. Provide a usable GitHub token/authenticated CLI environment in the local shell.
+4. Make the repository private and use a broader trusted upload mechanism if available.
+
+## Verified
+
+- `tools/build_sqe1_workbook.py` now starts with the real local imports and generator code.
+- `tools/build_sqe1_issue_atlas.py` now starts with the real local imports and generator code.
+- Repository remains public: `shopper12/sqe`.
