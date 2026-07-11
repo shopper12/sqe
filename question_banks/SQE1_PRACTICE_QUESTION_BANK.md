@@ -1,7 +1,7 @@
 # SQE1 Practice Workbook
 
-Version: v0.2 portable source
-Updated: 2026-07-04
+Version: v0.3 portable source
+Updated: 2026-07-11
 
 This workbook contains original single-best-answer style training items. They are designed to practise application, not to reproduce any official or commercial item.
 
@@ -163,6 +163,13 @@ Answer: A.
 Explanation: Money held for future work is normally client money until properly billed or transferred under the rules.
 
 ---
+
+
+## Completed subject drill
+
+- Dispute Resolution: `question_banks/SQE1_DISPUTE_RESOLUTION_SBA_V1.md`
+- 30 original English SBA questions with Korean rule/application and distractor elimination.
+- Coverage: ADR through enforcement, including pervasive ethics and procedural time limits.
 
 ## Expansion plan
 
