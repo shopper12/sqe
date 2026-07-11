@@ -1,7 +1,7 @@
 # SQE1 Theory Textbook
 
-Version: v0.4 portable source
-Updated: 2026-07-04
+Version: v0.5 portable source
+Updated: 2026-07-11
 
 ## Study method
 
@@ -18,6 +18,8 @@ Directors must act within powers, promote company success, use independent judgm
 ### Dispute Resolution
 
 Civil procedure questions usually turn on stage: pre-action, issue, service, response, allocation, disclosure, evidence, trial, settlement, costs, and enforcement. Limitation must be checked early. The trap is choosing a merits answer when the best answer is the next procedural step.
+
+Detailed complete module: `textbooks/SQE1_DISPUTE_RESOLUTION_TEXTBOOK_V1.md`. It follows the SRA specification applicable from 1 September 2026 and adds current CPR time limits, intermediate track, Churchill court-ordered ADR, Arbitration Act 2025, privilege, Part 36, appeals and enforcement.
 
 ### Contract
 
